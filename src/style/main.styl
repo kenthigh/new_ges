@@ -293,13 +293,26 @@ img.wap
         margin 0 auto 60px auto
         
     .interview-list-hd
+      a.interview-item:nth-of-type(even)
+        .above
+          width: 100%
+          height: 76px
+          background-color: #3d4a9d
+          @media $screenWidthSmaller_900
+            height 36px
+        .below
+          width: 100%
+          height: 150px
+          background-color: #182261
+          @media $screenWidthSmaller_900
+            height 76px
       a.interview-item
         width: 1140px
         height: 226px
         box-shadow: 0 0 33px 10px rgba(0, 0, 0, 0.11)
         position: relative
         display: inline-block
-        margin: 0 0 50px 0
+        margin: 0 0 20px 0
         transition: all 0.3s
         transform: perspective(500px)
         cursor: pointer
@@ -318,13 +331,13 @@ img.wap
         .above
           width: 100%
           height: 76px
-          background-color: #2e28a4
+          background-color: #49a2e4
           @media $screenWidthSmaller_900
             height 36px
         .below
           width: 100%
           height: 150px
-          background-color: #262092
+          background-color: #1365a2
           @media $screenWidthSmaller_900
             height 76px
         img.head
@@ -344,17 +357,17 @@ img.wap
           font-weight: bolder
           @media $screenWidthSmaller_900
             top: 10px
-            left: 162px
+            left: 149px
             font-size: 14px
         .touxian
           position: absolute
           top: 29px
-          left: 590px
+          left: 490px
           font-size: 21px
           color: #ffffff
           font-weight: 400
           @media $screenWidthSmaller_900
-            top: 8px
+            top: 11px
             left: auto
             right: 11px
             font-size: 12px
@@ -389,12 +402,12 @@ img.wap
 .pic-coll
   background-image: url('../img/star1.png')
   .pic-coll-container
-    width: MAINWIDTH
+    width: 1280px
     margin: 62px auto 30px auto
     @media $screenWidthSmaller_900
       width: 100%
     img.pic-coll-title
-      width: 1140px
+      width: 1280px
       margin 0 auto 60px auto
       &.pc
         @media $screenWidthSmaller_900
@@ -408,31 +421,30 @@ img.wap
     .pic-coll-list-hd
       margin: 0 auto
       @media $screenWidthSmaller_900
-        width: 95%
+        width: 100%
         text-align: center
       .pic-coll-item
         display: inline-block
         vertical-align: middle
         background-color: #ffffff
-        height: 372px
+        height: 340px
         margin-bottom: 12px
         @media $screenWidthSmaller_900
           height: auto
-          
         &.long
-          width: 756px
+          width: 550px
           @media $screenWidthSmaller_900
-            width: 64%
+            width: 40%
         &.short
-          width: 372px
+          width: 345px
           @media $screenWidthSmaller_900
-            width: 31%
+            width: 25%
         &.margin-right
           margin-right: 12px
 .bottom-logo
   .bottom-logo-container
     text-align: center
-    padding: 82px 0 0 0
+    padding: 40px 0 0 0
     img
       width: 705px
       @media $screenWidthSmaller_900

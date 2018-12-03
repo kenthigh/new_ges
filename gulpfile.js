@@ -2,7 +2,6 @@ var gulp = require('gulp')
 var gutil = require('gulp-util')
 var uglify = require('gulp-uglify')
 var jade = require('gulp-jade')
-var imagemin = require('gulp-imagemin')
 var sourcemaps = require('gulp-sourcemaps')
 var stylus = require('gulp-stylus')
 var runSequence = require('run-sequence')
@@ -37,7 +36,7 @@ gulp.task('uglifyjs', function () {
     .pipe(sourcemaps.init())
       .pipe(uglify())
     .pipe(sourcemaps.write('./map'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist/ges_2018/js'))
 })
 
 gulp.task('jade', function () {
@@ -48,13 +47,12 @@ gulp.task('jade', function () {
       }
     }))
     .pipe(jade())
-    .pipe(gulp.dest('dist/html'))
+    .pipe(gulp.dest('dist/ges_2018/1'))
 })
 
 gulp.task('img', function () {
   gulp.src(['src/img/*', 'src/img/**/*'])
-  .pipe(imagemin())
-  .pipe(gulp.dest('dist/img'))
+  .pipe(gulp.dest('dist/ges_2018/img'))
 })
 
 gulp.task('stylus', function () {
@@ -67,7 +65,7 @@ gulp.task('stylus', function () {
   .pipe(stylus({
     'include css': true
   }))
-  .pipe(gulp.dest('dist/css'))
+  .pipe(gulp.dest('dist/ges_2018/css'))
 })
 
 gulp.task('clean', function() {
